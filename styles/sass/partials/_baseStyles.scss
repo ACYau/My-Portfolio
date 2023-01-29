@@ -1,0 +1,27 @@
+@use "variables" as *;
+
+.wrapper{
+    max-width: 1260px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+button {  
+  color: $primary;
+  background-color: transparent;
+  padding: 18px 36px;
+  // border: 2px solid $primary;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: $quinary;
+  }
+  &:focus {
+    background-color: $quinary;
+  }
+}

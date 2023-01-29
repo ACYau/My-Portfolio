@@ -1,0 +1,58 @@
+@use "variables" as *;
+
+.navBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba($color: $quinary, $alpha: 0.08);
+  background-color: $quinary;
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+    a {
+      display: flex;
+    }
+}
+
+.slideOutNav{
+    padding: 35px 0px   ;
+    border-right: 1px solid $senary;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    height: 100vh;
+    background-color: $primary;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    transition: 0.75s;
+    .buttonContainer {
+        display: flex;
+        justify-content: flex-end;
+        button {
+            padding: 20px 50px 10px 20px;
+        }
+    }
+
+    .mainMenu {
+        a {
+            padding-left: 35%;
+            padding-bottom: 20px;
+            font-family: $secondaryFont;
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+            color: rgba($color: white, $alpha: 1);
+            &:hover {
+                color: rgba($color: $senary, $alpha: 0.5);
+            }
+            &:focus {
+                color: rgba($color: $senary,$alpha: 0.5);
+            }
+        }
+    }
+}
