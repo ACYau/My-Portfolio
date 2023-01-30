@@ -473,13 +473,16 @@ footer p {
           justify-content: space-between;
   padding: 20px 0;
 }
-.navBar a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.navBar .navMenu {
+  visibility: hidden;
 }
-.navBar a button {
-  margin-top: 20px;
+.navBar .navMenu li {
+  float: left;
+  line-height: 1.6rem;
+}
+.navBar .navMenu li a {
+  display: block;
+  padding: 16px;
 }
 
 .slideOutNav {
@@ -670,6 +673,9 @@ footer p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .skills .wrapper .leftContainer {
     -ms-flex-preferred-size: 30%;
@@ -711,6 +717,9 @@ footer p {
 }
 @media (min-width: 1201px) {
   /* all of our styles for large screens will go within this breakpoint */
+  .navBar .wrapper .navMenu {
+    visibility: visible;
+  }
   .projects .wrapper .projectContainer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
