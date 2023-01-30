@@ -1,0 +1,127 @@
+@media (min-width: 480px) {
+    /* all of our styles for tablets will go within this breakpoint */
+    .projects{
+        .wrapper{
+            .projectContainer{
+                .imageContainer{
+                    width: 350px;
+                    img{
+                        width: 320px;
+                        height: 200px;
+                    }
+                }
+                .buttonContainer{
+                    justify-content: left;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    /* all of our styles for small screens will go within this breakpoint */
+    .skills{
+        .wrapper{
+            ul{
+                column-count: 2;
+            }
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    /* all of our styles for desktops will go within this breakpoint */
+    .about{
+        .wrapper{
+            display: flex;
+            .imageContainer{
+                margin-right: 80px;
+            }
+            .textContainer{
+                h2{
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .skills{
+        .wrapper{
+            display:flex;
+            .leftContainer{
+                flex-basis: 30%;
+            }
+            ul{
+                column-count: 3;
+            }
+        }
+    }
+    .projects{
+        .wrapper{
+            .projectContainer{
+                justify-content: space-between;
+                .contentContainer{
+                    margin-left: 50px;
+                    flex-basis: 40%;
+                }
+            }
+        }
+    }
+    .contact{
+        .wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .leftContainer{
+                flex-basis: 20%;
+            }
+            .rightContainer{
+                flex-basis: 65%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1201px) {
+    /* all of our styles for large screens will go within this breakpoint */
+    .projects{
+        .wrapper{
+            .projectContainer{
+                justify-content: space-between;
+                .contentContainer{
+                    margin-left: 50px;
+                    flex-basis: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    /* all of our styles for larger screens will go within this breakpoint */
+    .projects{
+        .wrapper{
+            .projectContainer{
+                justify-content: space-between;
+                .contentContainer{
+                    margin-left: 50px;
+                    flex-basis: 60%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    /* all of our styles for extra large screens will go within this breakpoint */
+    .projects{
+        .wrapper{
+            .projectContainer{
+                justify-content: space-between;
+                .contentContainer{
+                    margin-left: 50px;
+                    flex-basis: 70%;
+                }
+            }
+        }
+    }
+}

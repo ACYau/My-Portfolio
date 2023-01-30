@@ -1,0 +1,85 @@
+@use "./variables" as *;
+
+.about{
+    display: flex;
+    background-color: $quinary;
+    .imageContainer{
+        text-align: center;
+        img{
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid $primary;
+        }
+    }
+    .textContainer{
+        h2{
+            text-align: center;
+        }
+    }
+}
+
+.skills{
+    background-color: $secondary;
+    h2, p, ul{
+        color: $quaternary;
+    }
+    //adds a customizable bullet point for list elements
+    li::before {content: "•"; color: $senary;
+        display: inline-block; width: 1rem;
+        margin-left: -1rem}
+    .leftContainer{
+        h2{
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.projects{
+    p{
+        line-height: 1.3rem;
+    }
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .projectContainer{
+        padding: 50px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .imageContainer{
+        padding: 15px;
+        border-radius: 10%;
+        width: 300px;
+        background-color: $tertiary;
+        img{
+            width: 270px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10%;
+        }
+        &:hover {
+            transform: scale(0.95);
+        }
+        &:focus {
+            transform: scale(0.95);
+        }
+    }
+    .buttonContainer{
+        margin: 20px 0;
+        display:flex;
+        justify-content: space-evenly;
+    }
+}
+
+.contact{
+    background-color: $quaternary;
+    .leftContainer{
+        padding-bottom: 30px;
+        h2{
+            padding-bottom: 15px;
+        }
+    }
+}

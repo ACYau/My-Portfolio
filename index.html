@@ -17,30 +17,145 @@
 <body>
 	<nav class="navBar">
 		<div class="wrapper">
-			<button class="menuIcon" onclick="openNav()">
+			<button class="logoButton" onclick="openNav()">
 				<h1>ay.</h1>
 			</button>
 		</div> <!-- .wrapper end -->
 
 		<div id="mySlideOutNav" class="slideOutNav">
 			<div class="buttonContainer">
-				<button onclick = "closeNav()">
+				<button class="closeNav" onclick = "closeNav()">
 					<img src="./assets/menu-close.svg" alt="close navigation">
 				</button>
 			</div>
 			<ul class="mainMenu">
-				<li><a href="#">Shop</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">FAQ</a></li>
+				<li><a href="#home" onclick = "closeNav()">home</a></li>
+				<li><a href="#about" onclick = "closeNav()">about</a></li>
+				<li><a href="#projects" onclick = "closeNav()">projects</a></li>
 			</ul>
 		</div>
 	</nav> <!-- nav end -->
 	<header>
+		<div class="wrapper">
+			<h2 id="home">aaron yau</h2>
+			<h3>front-end web developer</h3>
+		</div>
 	</header>
 	<main>
+		<section class="about" id="about">
+			<div class="wrapper">
+				<div class = "imageContainer">
+					<img src="./assets/portraitPhoto.jpg" alt="Portrait Image of Aaron Yau">
+				</div>
+				<div class = "textContainer">
+					<h2>about me</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas illum repellat, perspiciatis, deserunt hic tempore perferendis consequatur inventore, ipsa sunt vitae officia sit atque dolorem. Molestiae tempore adipisci dolorem aspernatur distinctio tempora quod culpa a corrupti iste odit, fugiat cupiditate sed nam repellendus nihil vitae provident pariatur soluta consequuntur. Harum!</p>
+				</div>
+			</div>
+		</section>
 
+		<section class="skills" id="skills">
+			<div class="wrapper">
+				<div class = "leftContainer">
+					<h2>skills</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, nulla.</p>
+				</div>
+				<div class = "rightContainer">
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>Sass</li>
+						<li>JavaScript</li>
+						<li>React</li>
+						<li>Firebase</li>
+						<li>Git and Github</li>
+						<li>Netlify</li>
+						<li>Using Rest APIs with AJAX</li>
+						<li>Web accessibility</li>
+						<li>Paired programming</li>
+						<li>Project Management</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="projects" id="projects">
+			<div class="wrapper">
+				<h2>projects</h2>
+				<div class="projectContainer">
+					<div class = "imageContainer">
+						<a href="https://aaron-yau-project-one.netlify.app/" target="_blank">
+							<img src="./assets/websiteRecreation.png">
+						</a>
+					</div>
+					<div class="contentContainer">
+						<h4>website recreation</h4>
+						<h5>HTML,CSS</h5>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora magnam, odit minus ab aliquid modi fugit esse odio non repudiandae.</p>
+						<div class="buttonContainer">
+							<a href="https://aaron-yau-project-one.netlify.app/" target="_blank">
+								<button><p>view live</p></button>
+							</a>
+							<a href="https://github.com/ACYau/AaronYauProjectOne" target="_blank">
+								<button><p>view code</p></button>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+				<div class="projectContainer">
+					<div class = "imageContainer">
+						<a href="https://pokemonbattlesimulator.netlify.app/" target="_blank">
+							<img src="./assets/pokemonBattleSimulator.png">
+						</a>
+					</div>
+					<div class="contentContainer">
+						<h4>pokemon battle simulator</h4>
+						<h5>HTML, CSS, JAVASCRIPT, REST APIs, AJAX</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero magnam et, eveniet quod saepe iusto molestias ut placeat aliquam fugit.</p>
+						<div class="buttonContainer">
+							<a href="https://pokemonbattlesimulator.netlify.app/" target="_blank">
+								<button><p>view live</p></button>
+							</a>
+							
+							<a href="https://github.com/caryltan/pokemonBattleSimulator" target="_blank">
+								<button><p>view code</p></button>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact" id="contact">
+			<div class="wrapper">
+				<div class="leftContainer">
+					<div class = "textContainer">
+						<h2>get in touch</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui recusandae necessitatibus! Totam, ratione inventore dolorem illo aut quis ex.</p>
+					</div>
+					<div class = "iconContainer">
+
+					</div>
+					
+				</div>
+				<div class="rightContainer">
+					<label for="name">NAME</label><br><br>
+					<input type="text" id="name" name="name" value=""><br><br>
+					<label for="email">EMAIL ADDRESS</label><br><br>
+					<input type="text" id="email" name="email" value=""><br><br>
+					<label for="message">MESSAGE</label><br><br>
+					<textarea id="message" name="message" value=""></textarea><br><br>
+					<input type="submit" id="submitButton" value="submit">
+				</div>
+			</div>
+		</section>
 	</main>
     <footer>
+		<div class="wrapper">
+			<p>Built in 2023 by Aaron Yau.</p>
+		</div>
     </footer>
 
 	<script>
