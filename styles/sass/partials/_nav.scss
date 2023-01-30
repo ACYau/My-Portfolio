@@ -11,13 +11,17 @@
         justify-content: space-between;
         padding: 20px 0;
     }
-    a {
-        display: flex;
-        button{
-            margin-top: 20px;
+    .navMenu{
+       display: none;
+        li {
+            float: left;
+            line-height: 1.6rem;
+        }
+        li a {
+            display: block;
+            padding: 16px;
         }
     }
-    
 }
 
 .slideOutNav{
@@ -44,9 +48,10 @@
     }
 
     .mainMenu {
+        li{
+            padding-bottom: 50px;
+        }
         a {
-            padding-left: 35%;
-            padding-bottom: 20px;
             font-family: $secondaryFont;
             font-size: 1.6rem;
             line-height: 2.5rem;
