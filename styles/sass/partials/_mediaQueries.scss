@@ -22,6 +22,9 @@
     /* all of our styles for small screens will go within this breakpoint */
     .skills{
         .wrapper{
+            h2,p,ul{
+                text-align: left;
+            }
             ul{
                 column-count: 2;
             }
@@ -85,7 +88,7 @@
 @media (min-width: 1201px) {
     /* all of our styles for large screens will go within this breakpoint */
     .navBar .wrapper .navMenu{
-        visibility: visible;
+        display: block;
     }
     .projects{
         .wrapper{

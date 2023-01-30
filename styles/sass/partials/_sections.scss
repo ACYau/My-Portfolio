@@ -21,6 +21,7 @@
 .skills{
     background-color: $secondary;
     h2, p, ul{
+        text-align: center;
         color: $quaternary;
     }
     //adds a customizable bullet point for list elements
