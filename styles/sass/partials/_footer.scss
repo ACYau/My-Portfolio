@@ -1,0 +1,9 @@
+@use "./variables" as *;
+
+footer{
+    background-color: $secondary;
+    padding: 40px 0;
+    p{
+        color: $quinary;
+    }
+}

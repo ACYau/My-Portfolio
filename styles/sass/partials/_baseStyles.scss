@@ -1,0 +1,108 @@
+@use "variables" as *;
+
+.wrapper{
+    min-width: 300px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+section{
+  padding: 200px 0;
+}
+
+label{
+  font-family: $primaryFont;
+}
+
+input[type=text]{
+  width:100%;
+  border: none;
+  padding: 10px 0;
+}
+
+textarea{
+  width:100%;
+  border: none;
+  resize: none;
+  min-height: 200px;
+}
+
+input[type=submit]{
+  border:none;
+  font-family: $primaryFont;
+  background-color: $senary;
+  padding: 10px 40px;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover{
+    background-color: $primary;
+    color:$quinary;
+  }
+  &:focus {
+    background-color: $primary;
+    color:$quinary;
+  }
+}
+
+button {
+  background-color: $senary;
+  border:none;
+  width: 150px;
+  height: 40px;
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    transform: scale(0.95);
+    background-color: $primary;
+    p{
+      color:$quinary;
+    }
+  }
+  &:focus {
+    transform: scale(0.95);
+    background-color: $primary;
+    h1{
+      color:$quinary;
+    }
+  }
+  &.logoButton{
+    padding: 0;
+    height: 100px;
+    width:100px;
+    text-align: center;
+    color: $primary;
+    background-color: transparent;
+    border: 2px solid $primary;
+    border-radius: 50%;
+    &:hover {
+      background-color: $primary;
+      h1{
+        color:$quinary;
+      }
+    }
+    &:focus {
+      background-color: $primary;
+      h1{
+        color:$quinary;
+      }
+    }
+  }
+  &.closeNav{
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+  }
+}
+
+i{
+  padding-top: 30px;
+  padding-right: 15px;
+  color: $secondary;
+  font-size: 2rem;
+}
