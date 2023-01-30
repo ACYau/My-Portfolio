@@ -432,6 +432,13 @@ button.closeNav {
   background-color: transparent;
 }
 
+i {
+  padding-top: 30px;
+  padding-right: 15px;
+  color: #3D48AE;
+  font-size: 2rem;
+}
+
 header {
   margin: 0;
 }
@@ -470,6 +477,9 @@ footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.navBar a button {
+  margin-top: 20px;
 }
 
 .slideOutNav {

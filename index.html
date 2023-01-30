@@ -10,14 +10,15 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+	<script src="https://kit.fontawesome.com/79b85ea379.js" crossorigin="anonymous"></script>	
 	<link rel="stylesheet" href="./styles/styles.css">
 	
 </head>
 <body>
 	<nav class="navBar">
 		<div class="wrapper">
-			<button class="logoButton" onclick="openNav()">
+			<button class="logoButton" onclick="openNav(viewport)">
 				<h1>ay.</h1>
 			</button>
 		</div> <!-- .wrapper end -->
@@ -29,9 +30,18 @@
 				</button>
 			</div>
 			<ul class="mainMenu">
-				<li><a href="#home" onclick = "closeNav()">home</a></li>
-				<li><a href="#about" onclick = "closeNav()">about</a></li>
-				<li><a href="#projects" onclick = "closeNav()">projects</a></li>
+				<li><a href="#home" onclick = "closeNav()"><p>home</p></a></li>
+				<li><a href="#about" onclick = "closeNav()"><p></p>about</a></li>
+				<li><a href="#projects" onclick = "closeNav()"><p>projects</p></a></li>
+				<li>
+					<a href="#contact" onclick = "closeNav()">
+						<button>
+							<p>
+								contact us
+							</p>
+						</button>
+					</a>
+				</li>
 			</ul>
 		</div>
 	</nav> <!-- nav end -->
@@ -40,7 +50,7 @@
 			<h2 id="home">aaron yau</h2>
 			<h3>front-end web developer</h3>
 		</div>
-	</header>
+	</header> <!--header end-->
 	<main>
 		<section class="about" id="about">
 			<div class="wrapper">
@@ -51,7 +61,7 @@
 					<h2>about me</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas illum repellat, perspiciatis, deserunt hic tempore perferendis consequatur inventore, ipsa sunt vitae officia sit atque dolorem. Molestiae tempore adipisci dolorem aspernatur distinctio tempora quod culpa a corrupti iste odit, fugiat cupiditate sed nam repellendus nihil vitae provident pariatur soluta consequuntur. Harum!</p>
 				</div>
-			</div>
+			</div> <!-- .wrapper end -->
 		</section>
 
 		<section class="skills" id="skills">
@@ -76,7 +86,7 @@
 						<li>Project Management</li>
 					</ul>
 				</div>
-			</div>
+			</div> <!-- .wrapper end -->
 		</section>
 
 		<section class="projects" id="projects">
@@ -85,7 +95,7 @@
 				<div class="projectContainer">
 					<div class = "imageContainer">
 						<a href="https://aaron-yau-project-one.netlify.app/" target="_blank">
-							<img src="./assets/websiteRecreation.png">
+							<img src="./assets/websiteRecreation.png" alt="screen capture of recreated website">
 						</a>
 					</div>
 					<div class="contentContainer">
@@ -106,7 +116,7 @@
 				<div class="projectContainer">
 					<div class = "imageContainer">
 						<a href="https://pokemonbattlesimulator.netlify.app/" target="_blank">
-							<img src="./assets/pokemonBattleSimulator.png">
+							<img src="./assets/pokemonBattleSimulator.png" alt="a pokemon battle">
 						</a>
 					</div>
 					<div class="contentContainer">
@@ -125,7 +135,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> <!-- .wrapper end -->
 		</section>
 
 		<section class="contact" id="contact">
@@ -136,7 +146,10 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis qui recusandae necessitatibus! Totam, ratione inventore dolorem illo aut quis ex.</p>
 					</div>
 					<div class = "iconContainer">
-
+						<a href="https://www.linkedin.com/in/aaronchyau/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
+						<a href="https://github.com/ACYau" target="_blank"><i class="devicon-github-original"></i></a>
+						<a href=""><i class="devicon-twitter-original"></i></a>
+						<a href=""><i class="fa-solid fa-envelope"></i></a>
 					</div>
 					
 				</div>
@@ -149,24 +162,31 @@
 					<textarea id="message" name="message" value=""></textarea><br><br>
 					<input type="submit" id="submitButton" value="submit">
 				</div>
-			</div>
+			</div> <!-- .wrapper end -->
 		</section>
 	</main>
     <footer>
 		<div class="wrapper">
 			<p>Built in 2023 by Aaron Yau.</p>
-		</div>
+		</div> <!-- .wrapper end -->
     </footer>
 
 	<script>
-		function openNav() {
-			document.getElementById("mySlideOutNav").style.width = "100%";
-			document.getElementById("mySlideOutNav").style.opacity = "100%";
+		function openNav(viewport) {
+			if (viewport.matches) { //media query, if the viewport size is greater than 768 then the slideout nav is only 60% of the screen width
+				document.getElementById("mySlideOutNav").style.width = "60%";
+				document.getElementById("mySlideOutNav").style.opacity = "100%";
+			} else {
+				document.getElementById("mySlideOutNav").style.width = "100%";
+				document.getElementById("mySlideOutNav").style.opacity = "100%";
+			}
 		}
 		function closeNav() {
 			document.getElementById("mySlideOutNav").style.width = "0";
 			document.getElementById("mySlideOutNav").style.opacity = "0%";
-		} 
+		}
+		//sets the min-width to change the slide-out menu width
+		var viewport = window.matchMedia("(min-width: 768px)")
 	</script>
 </body>
 </html>

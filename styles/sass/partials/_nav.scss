@@ -1,19 +1,23 @@
 @use "variables" as *;
 
 .navBar {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background-color: white;
-  border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.2);
     .wrapper {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
     }
     a {
-      display: flex;
+        display: flex;
+        button{
+            margin-top: 20px;
+        }
     }
+    
 }
 
 .slideOutNav{
