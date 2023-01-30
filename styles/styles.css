@@ -308,6 +308,7 @@ h5 {
 
 ul {
   list-style: none;
+  text-align: center;
 }
 
 li {
@@ -474,7 +475,7 @@ footer p {
   padding: 20px 0;
 }
 .navBar .navMenu {
-  visibility: hidden;
+  display: none;
 }
 .navBar .navMenu li {
   float: left;
@@ -518,9 +519,10 @@ footer p {
 .slideOutNav .buttonContainer button {
   padding: 20px 50px 10px 20px;
 }
+.slideOutNav .mainMenu li {
+  padding-bottom: 50px;
+}
 .slideOutNav .mainMenu a {
-  padding-left: 35%;
-  padding-bottom: 20px;
   font-family: "PT Sans", sans-serif;
   font-size: 1.6rem;
   line-height: 2.5rem;
@@ -555,6 +557,7 @@ footer p {
   background-color: #3D48AE;
 }
 .skills h2, .skills p, .skills ul {
+  text-align: center;
   color: #DFE0FC;
 }
 .skills li::before {
@@ -650,6 +653,9 @@ footer p {
 }
 @media (min-width: 768px) {
   /* all of our styles for small screens will go within this breakpoint */
+  .skills .wrapper h2, .skills .wrapper p, .skills .wrapper ul {
+    text-align: left;
+  }
   .skills .wrapper ul {
     -webkit-column-count: 2;
        -moz-column-count: 2;
@@ -718,7 +724,7 @@ footer p {
 @media (min-width: 1201px) {
   /* all of our styles for large screens will go within this breakpoint */
   .navBar .wrapper .navMenu {
-    visibility: visible;
+    display: block;
   }
   .projects .wrapper .projectContainer {
     -webkit-box-pack: justify;
