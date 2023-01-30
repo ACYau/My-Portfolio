@@ -47,6 +47,7 @@
     .skills{
         .wrapper{
             display:flex;
+            justify-content: space-between;
             .leftContainer{
                 flex-basis: 30%;
             }
@@ -83,6 +84,9 @@
 
 @media (min-width: 1201px) {
     /* all of our styles for large screens will go within this breakpoint */
+    .navBar .wrapper .navMenu{
+        visibility: visible;
+    }
     .projects{
         .wrapper{
             .projectContainer{

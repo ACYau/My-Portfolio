@@ -18,9 +18,27 @@
 <body>
 	<nav class="navBar">
 		<div class="wrapper">
-			<button class="logoButton" onclick="openNav(viewport)">
-				<h1>ay.</h1>
-			</button>
+			<div class="navButton">
+				<button class="logoButton" onclick="openNav(viewport)">
+					<h1>ay.</h1>
+				</button>
+			</div>
+			<div class="navMenu">
+				<ul>
+					<li><a href="#home"><p>home</p></a></li>
+					<li><a href="#about"><p></p>about</a></li>
+					<li><a href="#projects"><p>projects</p></a></li>
+					<li>
+						<a href="#contact">
+							<button>
+								<p>
+									contact us
+								</p>
+							</button>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div> <!-- .wrapper end -->
 
 		<div id="mySlideOutNav" class="slideOutNav">
@@ -173,10 +191,14 @@
 
 	<script>
 		function openNav(viewport) {
-			if (viewport.matches) { //media query, if the viewport size is greater than 768 then the slideout nav is only 60% of the screen width
+			if (viewport[1].matches) { //media query, if the viewport size is greater than 1201 then the slideout nav doesn't appear
+				document.getElementById("mySlideOutNav").style.width = "0%";
+				document.getElementById("mySlideOutNav").style.opacity = "0%";
+			} else if (viewport[0].matches){ //media query, if the viewport size is greater than 768 then the slideout nav is only 60% of the screen width
 				document.getElementById("mySlideOutNav").style.width = "60%";
 				document.getElementById("mySlideOutNav").style.opacity = "100%";
-			} else {
+			}
+			else { //media query, all screen sizes under 768 has the slide out nav take up the entire screen
 				document.getElementById("mySlideOutNav").style.width = "100%";
 				document.getElementById("mySlideOutNav").style.opacity = "100%";
 			}
@@ -186,7 +208,7 @@
 			document.getElementById("mySlideOutNav").style.opacity = "0%";
 		}
 		//sets the min-width to change the slide-out menu width
-		var viewport = window.matchMedia("(min-width: 768px)")
+		var viewport = [window.matchMedia("(min-width: 768px)"), window.matchMedia("(min-width: 1201px)")]
 	</script>
 </body>
 </html>
