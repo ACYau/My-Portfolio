@@ -17,13 +17,14 @@ label{
 input[type=text]{
   width:100%;
   border: none;
-  padding: 10px 0;
+  padding: 10px;
 }
 
 textarea{
   width:100%;
   border: none;
   resize: none;
+  padding: 10px;
   min-height: 200px;
 }
 
@@ -81,12 +82,14 @@ button {
     border-radius: 50%;
     &:hover {
       background-color: $primary;
+      transform: scale(0.95);
       h1{
         color:$quinary;
       }
     }
     &:focus {
       background-color: $primary;
+      transform: scale(0.95);
       h1{
         color:$quinary;
       }

@@ -24,6 +24,9 @@
         text-align: center;
         color: $quaternary;
     }
+    li{
+        text-align: left;
+    }
     //adds a customizable bullet point for list elements
     li::before {content: "•"; color: $senary;
         display: inline-block; width: 1rem;
@@ -36,6 +39,9 @@
 }
 
 .projects{
+    h2{
+        flex-basis:100%;
+    }
     p{
         line-height: 1.3rem;
     }
@@ -44,11 +50,12 @@
         flex-wrap: wrap;
     }
     .projectContainer{
-        padding: 50px 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        margin-top: 40px;
+        width: 100%;
     }
     .imageContainer{
         padding: 15px;
@@ -81,6 +88,9 @@
         padding-bottom: 30px;
         h2{
             padding-bottom: 15px;
+        }
+        .iconContainer{
+            margin-top: 20px;
         }
     }
 }

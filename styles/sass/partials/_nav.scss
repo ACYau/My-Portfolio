@@ -20,6 +20,12 @@
         li a {
             display: block;
             padding: 16px;
+            &:hover{
+                transform: scale(0.95);
+            }
+            &:focus{
+                transform: scale(0.95);
+            }
         }
     }
 }
@@ -51,16 +57,16 @@
         li{
             padding-bottom: 50px;
         }
-        a {
+        li a {
             font-family: $secondaryFont;
             font-size: 1.6rem;
             line-height: 2.5rem;
             color: rgba($color: white, $alpha: 1);
             &:hover {
-                color: rgba($color: $senary, $alpha: 0.5);
+                color: rgba($color: $senary, $alpha: 1);
             }
             &:focus {
-                color: rgba($color: $senary,$alpha: 0.5);
+                color: rgba($color: $senary,$alpha: 1);
             }
         }
     }

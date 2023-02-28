@@ -346,13 +346,14 @@ label {
 input[type=text] {
   width: 100%;
   border: none;
-  padding: 10px 0;
+  padding: 10px;
 }
 
 textarea {
   width: 100%;
   border: none;
   resize: none;
+  padding: 10px;
   min-height: 200px;
 }
 
@@ -416,12 +417,16 @@ button.logoButton {
 }
 button.logoButton:hover {
   background-color: #2A3033;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 button.logoButton:hover h1 {
   color: #E7E8EE;
 }
 button.logoButton:focus {
   background-color: #2A3033;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 button.logoButton:focus h1 {
   color: #E7E8EE;
@@ -485,6 +490,14 @@ footer p {
   display: block;
   padding: 16px;
 }
+.navBar .navMenu li a:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.navBar .navMenu li a:focus {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
 
 .slideOutNav {
   padding: 35px 0px;
@@ -522,17 +535,17 @@ footer p {
 .slideOutNav .mainMenu li {
   padding-bottom: 50px;
 }
-.slideOutNav .mainMenu a {
+.slideOutNav .mainMenu li a {
   font-family: "PT Sans", sans-serif;
   font-size: 1.6rem;
   line-height: 2.5rem;
   color: white;
 }
-.slideOutNav .mainMenu a:hover {
-  color: rgba(251, 175, 1, 0.5);
+.slideOutNav .mainMenu li a:hover {
+  color: #fbaf01;
 }
-.slideOutNav .mainMenu a:focus {
-  color: rgba(251, 175, 1, 0.5);
+.slideOutNav .mainMenu li a:focus {
+  color: #fbaf01;
 }
 
 .about {
@@ -560,6 +573,9 @@ footer p {
   text-align: center;
   color: #DFE0FC;
 }
+.skills li {
+  text-align: left;
+}
 .skills li::before {
   content: "•";
   color: #FBAF01;
@@ -571,6 +587,10 @@ footer p {
   padding-bottom: 20px;
 }
 
+.projects h2 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
 .projects p {
   line-height: 1.3rem;
 }
@@ -582,7 +602,6 @@ footer p {
       flex-wrap: wrap;
 }
 .projects .projectContainer {
-  padding: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -594,6 +613,8 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 40px;
+  width: 100%;
 }
 .projects .imageContainer {
   padding: 15px;
@@ -635,6 +656,9 @@ footer p {
 .contact .leftContainer h2 {
   padding-bottom: 15px;
 }
+.contact .leftContainer .iconContainer {
+  margin-top: 20px;
+}
 
 @media (min-width: 480px) {
   /* all of our styles for tablets will go within this breakpoint */
@@ -675,23 +699,6 @@ footer p {
   .about .wrapper .textContainer h2 {
     text-align: left;
   }
-  .skills .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .skills .wrapper .leftContainer {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
-  }
-  .skills .wrapper ul {
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
-  }
   .projects .wrapper .projectContainer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -726,6 +733,12 @@ footer p {
   .navBar .wrapper .navMenu {
     display: block;
   }
+  .logoButton:hover {
+    pointer-events: none;
+  }
+  .logoButton:focus {
+    pointer-events: none;
+  }
   .projects .wrapper .projectContainer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -735,6 +748,29 @@ footer p {
     margin-left: 50px;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+  }
+}
+@media (min-width: 1400px) {
+  .skills .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .skills .wrapper .leftContainer {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    margin-right: 50px;
+  }
+  .skills .wrapper ul {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+  }
+  .skills .wrapper ul li {
+    margin-right: 20px;
   }
 }
 @media (min-width: 1600px) {
@@ -759,7 +795,7 @@ footer p {
   }
   .projects .wrapper .projectContainer .contentContainer {
     margin-left: 50px;
-    -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
+    -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
   }
 }
