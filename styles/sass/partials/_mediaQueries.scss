@@ -47,18 +47,6 @@
             }
         }
     }
-    .skills{
-        .wrapper{
-            display:flex;
-            justify-content: space-between;
-            .leftContainer{
-                flex-basis: 30%;
-            }
-            ul{
-                column-count: 3;
-            }
-        }
-    }
     .projects{
         .wrapper{
             .projectContainer{
@@ -90,6 +78,14 @@
     .navBar .wrapper .navMenu{
         display: block;
     }
+    .logoButton{
+        &:hover {
+            pointer-events: none;
+          }
+          &:focus {
+            pointer-events: none;
+          }
+    }
     .projects{
         .wrapper{
             .projectContainer{
@@ -97,6 +93,25 @@
                 .contentContainer{
                     margin-left: 50px;
                     flex-basis: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1400px){
+    .skills{
+        .wrapper{
+            display:flex;
+            justify-content: space-between;
+            .leftContainer{
+                flex-basis: 30%;
+                margin-right: 50px;
+            }
+            ul{
+                column-count: 3;
+                li{
+                    margin-right: 20px;
                 }
             }
         }
@@ -126,7 +141,7 @@
                 justify-content: space-between;
                 .contentContainer{
                     margin-left: 50px;
-                    flex-basis: 70%;
+                    flex-basis: 65%;
                 }
             }
         }
