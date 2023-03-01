@@ -329,6 +329,10 @@ a {
   transition: 0.3s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   min-width: 300px;
   width: 70%;
@@ -649,8 +653,6 @@ footer p {
 
 .contact {
   background-color: #DFE0FC;
-  -webkit-animation: transitionIn 0.75s;
-          animation: transitionIn 0.75s;
 }
 .contact .leftContainer {
   padding-bottom: 30px;
@@ -673,31 +675,6 @@ footer p {
   margin: 0;
 }
 
-@-webkit-keyframes transitionIn {
-  from {
-    opacity: 0;
-    -webkit-transform: rotateX(-10px);
-            transform: rotateX(-10px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: rotateX();
-            transform: rotateX();
-  }
-}
-
-@keyframes transitionIn {
-  from {
-    opacity: 0;
-    -webkit-transform: rotateX(-10px);
-            transform: rotateX(-10px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: rotateX();
-            transform: rotateX();
-  }
-}
 @media (min-width: 480px) {
   /* all of our styles for tablets will go within this breakpoint */
   .projects .wrapper .projectContainer .imageContainer {

@@ -84,7 +84,6 @@
 
 .contact{
     background-color: $quaternary;
-    animation: transitionIn 0.75s;
     .leftContainer{
         padding-bottom: 30px;
         h2{
@@ -102,18 +101,7 @@
     h2, p, button{
         margin: 25px 0;
     }
-
     button p{
         margin: 0;
-    }
-}
-
-@keyframes transitionIn {
-    from {
-        opacity: 0;
-        transform: rotateX(-10px);
-    } to {
-        opacity: 1;
-        transform: rotateX();
     }
 }
