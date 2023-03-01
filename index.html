@@ -216,7 +216,7 @@
 					
 				</div>
 				<div class="rightContainer">
-					<form action="https://formsubmit.co/aaronchyau@gmail.com" method="POST">
+					<form action="https://formsubmit.co/1da72c452003f9d681c4f758caf7cb41" method="POST">
 						<!--Honeypot-->
 						<input type="text" name="_honey" style="display:none">
 						<!--disable captcha-->
@@ -225,13 +225,21 @@
 						<input type="hidden" name="_template" value="box">
 
 						<label for="name">NAME</label><br><br>
-						<input type="text" id="name" name="name" placeholder="Full Name..."><br><br>
+						<input type="text" id="name" name="name" placeholder="Full Name..." required
+						oninvalid="setCustomValidity('Please enter your name')"
+       					oninput="setCustomValidity('')"><br><br>
 
 						<label for="email">EMAIL ADDRESS</label><br><br>
-						<input type="text" id="email" name="email" placeholder="E-mail Address..."><br><br>
+						<!--pattern is to validate for a proper e-mail-->
+						<input type="text" id="email" name="email" placeholder="E-mail Address..."
+						required pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*"
+						oninvalid="setCustomValidity('Please enter a valid e-mail address')"
+       					oninput="setCustomValidity('')"/><br><br>
 						
 						<label for="message">MESSAGE</label><br><br>
-						<textarea id="message" name="message" placeholder="Send a message..."></textarea><br><br>
+						<textarea id="message" name="message" placeholder="Send a message..." required
+						oninvalid="setCustomValidity('Please enter a message you would like to send me!')"
+       					oninput="setCustomValidity('')"></textarea><br><br>
 						<input type="submit" id="submitButton" value="Send">
 
 						<input type="hidden" name="_next" value="https://aaroncyau.com/thanks.html">
