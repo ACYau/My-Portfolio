@@ -216,7 +216,7 @@
 					
 				</div>
 				<div class="rightContainer">
-					<form action="https://formsubmit.co/1da72c452003f9d681c4f758caf7cb41" method="POST">
+					<form id="form" action="https://formsubmit.co/1da72c452003f9d681c4f758caf7cb41" method="POST">
 						<!--Honeypot-->
 						<input type="text" name="_honey" style="display:none">
 						<!--disable captcha-->
@@ -255,6 +255,11 @@
     </footer>
 
 	<script>
+		function onSubmitForm(e) {
+			var form = document.getElementById("form");
+			form.reset();
+		}
+
 		function openNav(viewport) {
 			if (viewport[1].matches) { //media query, if the viewport size is greater than 1201 then the slideout nav doesn't appear
 				document.getElementById("mySlideOutNav").style.width = "0%";
