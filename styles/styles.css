@@ -329,6 +329,10 @@ a {
   transition: 0.3s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   min-width: 300px;
   width: 70%;
@@ -658,6 +662,17 @@ footer p {
 }
 .contact .leftContainer .iconContainer {
   margin-top: 20px;
+}
+
+.thanksPage {
+  text-align: center;
+  margin: 20% 0;
+}
+.thanksPage h2, .thanksPage p, .thanksPage button {
+  margin: 25px 0;
+}
+.thanksPage button p {
+  margin: 0;
 }
 
 @media (min-width: 480px) {
