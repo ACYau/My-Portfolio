@@ -60,10 +60,9 @@
     .imageContainer{
         padding: 15px;
         border-radius: 10%;
-        width: 300px;
         background-color: $tertiary;
         img{
-            width: 270px;
+            width: 240px;
             height: 150px;
             object-fit: cover;
             border-radius: 10%;
@@ -75,7 +74,11 @@
             transform: scale(0.95);
         }
     }
+    .contentContainer{
+        width: 100%;
+    }
     .buttonContainer{
+        width: 100%;
         margin: 20px 0;
         display:flex;
         justify-content: space-evenly;
